@@ -10,5 +10,16 @@ export class AppComponent {
   title   : string = 'Conador App';
   counter : number = 0;
 
+  acumullator( value:number ) {
+    this.counter += value;
+  }
+
+  // sumar( value:number ) {
+  //   this.counter += value;
+  // }
+
+  // restar( value:number ) {
+  //   this.counter -= value;
+  // }
 
 }
