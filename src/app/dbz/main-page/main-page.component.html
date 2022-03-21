@@ -17,11 +17,13 @@
   <div class="col">
     <h3>Add person</h3>
     <hr>
-    <form>
+    <form (ngSubmit)="addPerson()">
       <input type="text" placeholder="Name"/>
       <input type="number" placeholder="Power"/>
 
-      <button>Add person</button>
+      <button type="submit">
+        Add person
+      </button>
     </form>
   </div>
 
