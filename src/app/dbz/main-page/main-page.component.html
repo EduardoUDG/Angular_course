@@ -4,32 +4,33 @@
 <div class="row">
 
   <div class="col">
-    <h3>People</h3>
+    <app-characters></app-characters>
+    <!-- <h3>People</h3>
     <hr>
     <ul>
-      <li *ngFor="let person of people" >
-        {{ person.name }} - {{ person.power | number }}
+      <li *ngFor="let character of characters" >
+        {{ character.name }} - {{ character.power | number }}
       </li>
-    </ul>
+    </ul> -->
   </div>
 
 
   <div class="col">
-    <h3>Add person <small>{{ person.name }}</small></h3>
+    <h3>Add character <small>{{ character.name }}</small></h3>
     <hr>
     <form (ngSubmit)="addPerson()">
       <input
         type="text"
         placeholder="Name"
         name="name"
-        [(ngModel)]="person.name"
+        [(ngModel)]="character.name"
       />
 
       <input
         type="number"
         placeholder="Power"
         name="powe"
-        [(ngModel)]="person.power"
+        [(ngModel)]="character.power"
       />
 
       <button type="submit">

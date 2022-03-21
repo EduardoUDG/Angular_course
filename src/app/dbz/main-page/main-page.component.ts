@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 
-interface Person {
+interface Character {
   name: string;
   power: number;
 }
@@ -12,7 +12,7 @@ interface Person {
 })
 export class MainPageComponent {
 
-  people: Person[] = [
+  characters: Character[] = [
     {
       name: 'Goku',
       power: 15000
@@ -23,18 +23,17 @@ export class MainPageComponent {
     }
   ];
 
-  person:Person = {
+  character:Character = {
     name: '',
     power: 0
   }
 
   addPerson() {
-    if ( this.person.name.trim().length === 0 ) { return; }
+    if ( this.character.name.trim().length === 0 ) { return; }
 
 
-    this.people.push( this.person );
-    console.log( this.person );
-    this.person = { name: '', power: 0};
+    this.characters.push( this.character );
+    console.log( this.character );
+    this.character = { name: '', power: 0};
   }
-
 }
