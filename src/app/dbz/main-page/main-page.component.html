@@ -10,8 +10,8 @@
 
   <div class="col">
     <app-add-character
-      [characters]="characters"
       [character]="character"
+      (onNewCharacter)="addNewCharacter( $event )"
     >
     </app-add-character>
   </div>
