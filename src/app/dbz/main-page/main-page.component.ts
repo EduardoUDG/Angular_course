@@ -12,17 +12,29 @@ interface Person {
 })
 export class MainPageComponent {
 
+  people: Person[] = [
+    {
+      name: 'Goku',
+      power: 15000
+    },
+    {
+      name: 'Vegeta',
+      power: 7500
+    }
+  ];
 
   person:Person = {
-    name: 'Trucks',
-    power: 14000
+    name: '',
+    power: 0
   }
 
   addPerson() {
+    if ( this.person.name.trim().length === 0 ) { return; }
+
+
+    this.people.push( this.person );
     console.log( this.person );
+    this.person = { name: '', power: 0};
   }
 
-  // cambiarNombre( event:any ) {
-  //   console.log( event.target.value );
-  // }
 }
