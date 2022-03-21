@@ -20,17 +20,9 @@ export class MainPageComponent {
     }
   ];
 
+
   character:Character = {
     name: '',
     power: 0
-  }
-
-  addPerson() {
-    if ( this.character.name.trim().length === 0 ) { return; }
-
-
-    this.characters.push( this.character );
-    console.log( this.character );
-    this.character = { name: '', power: 0};
   }
 }

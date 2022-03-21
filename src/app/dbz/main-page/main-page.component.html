@@ -6,38 +6,14 @@
   <div class="col">
     <app-characters [characters]="characters">
     </app-characters>
-    <!-- <h3>People</h3>
-    <hr>
-    <ul>
-      <li *ngFor="let character of characters" >
-        {{ character.name }} - {{ character.power | number }}
-      </li>
-    </ul> -->
   </div>
 
-
   <div class="col">
-    <h3>Add character <small>{{ character.name }}</small></h3>
-    <hr>
-    <form (ngSubmit)="addPerson()">
-      <input
-        type="text"
-        placeholder="Name"
-        name="name"
-        [(ngModel)]="character.name"
-      />
-
-      <input
-        type="number"
-        placeholder="Power"
-        name="powe"
-        [(ngModel)]="character.power"
-      />
-
-      <button type="submit">
-        Add person
-      </button>
-    </form>
+    <app-add-character
+      [characters]="characters"
+      [character]="character"
+    >
+    </app-add-character>
   </div>
 
 </div>
