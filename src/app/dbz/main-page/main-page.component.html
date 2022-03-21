@@ -15,11 +15,22 @@
 
 
   <div class="col">
-    <h3>Add person</h3>
+    <h3>Add person <small>{{ person.name }}</small></h3>
     <hr>
     <form (ngSubmit)="addPerson()">
-      <input type="text" placeholder="Name"/>
-      <input type="number" placeholder="Power"/>
+      <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        [(ngModel)]="person.name"
+      />
+
+      <input
+        type="number"
+        placeholder="Power"
+        name="powe"
+        [(ngModel)]="person.power"
+      />
 
       <button type="submit">
         Add person
