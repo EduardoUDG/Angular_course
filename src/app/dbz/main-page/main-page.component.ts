@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
+import { Character } from '../interfaces/interfaces.interface';
 
 
-interface Character {
-  name: string;
-  power: number;
-}
 
 @Component({
   selector: 'app-main-page',
