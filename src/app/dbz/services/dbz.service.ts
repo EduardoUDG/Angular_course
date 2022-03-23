@@ -22,8 +22,10 @@ export class DbzService {
 
 
 
-  constructor() {
-    console.log('Servicio inizializado');
+  constructor() { }
+
+  setCharacter( character: Character ) {
+    this._characters.push( character );
   }
 
 }
