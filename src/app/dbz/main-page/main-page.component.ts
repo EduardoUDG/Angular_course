@@ -10,16 +10,7 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent {
 
-  characters: Character[] = [
-    {
-      name: 'Goku',
-      power: 15000
-    },
-    {
-      name: 'Vegeta',
-      power: 7500
-    }
-  ];
+  // characters: Character[] = [];
 
 
   character:Character = {
@@ -28,11 +19,15 @@ export class MainPageComponent {
   }
 
 
-  addNewCharacter( character: Character ) {
-    this.characters.push( character );
-  }
+  // addNewCharacter( character: Character ) {
+  //   this.characters.push( character );
+  // }
 
-  constructor( private dbzService: DbzService ) {
+  // get characters() {
+  //   return this.dbzService.characters;
+  // }
 
+  constructor() {
+    // this.characters = this.dbzService.characters;
   }
 }
